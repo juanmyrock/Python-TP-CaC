@@ -10,14 +10,14 @@
 /*-----------------------------------------*/
 
 .carousel-inner .opacidad {
-    opacity: 0.4;
+    opacity: 0.5;
 }
 .carousel-inner {
     overflow: hidden;  
 }
 .carousel-inner img {
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     margin-top: -12%;
     margin-bottom: -6%;
 }
