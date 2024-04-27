@@ -1,14 +1,19 @@
-header{
-    height: 800px;
-    background-color:deepskyblue;
-    margin-bottom: 1%;
+header {
+    position: relative;
+    background-color: #101820;
 }
-
-.container-fluid{
-    margin-bottom: 1%
+.carousel-inner .opacidad {
+    opacity: 0.6;
 }
-.row{
-    background-color:rgb(148, 183, 183);
-    padding: 1%;
-    margin-bottom: 1%;
+.carousel-inner {
+    overflow: hidden;  
+}
+#carouselContainer {
+    background-color: #101820;
+}
+.nav-link, .nav-item{
+    color: white;
+}
+#barraNav{
+    padding: 4%;
 }
