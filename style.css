@@ -2,18 +2,23 @@ header {
     position: relative;
     background-color: #101820;
 }
+#carouselContainer {
+    background-color: #101820;
+}
 .carousel-inner .opacidad {
     opacity: 0.6;
 }
 .carousel-inner {
     overflow: hidden;  
 }
-#carouselContainer {
-    background-color: #101820;
+.carousel-inner img{
+    width: auto;
+    height: 80%;
 }
+
 .nav-link, .nav-item{
     color: white;
 }
 #barraNav{
-    padding: 4%;
+    padding: 7%;
 }
