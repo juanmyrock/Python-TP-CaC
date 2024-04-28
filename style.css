@@ -1,3 +1,8 @@
+body {
+    background-color: #101820;
+    margin: 0;
+    padding: 0;
+}
 header {
     position: relative;
     background-color: #101820;
@@ -15,10 +20,40 @@ header {
     width: auto;
     height: 80%;
 }
-
 .nav-link, .nav-item{
     color: white;
 }
 #barraNav{
-    padding: 7%;
+    padding: 5%;
 }
+#barraNav li{
+    font-weight: bold;
+}
+#logotipo{
+    gap: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#logotipo img{
+    width: auto;
+    height: 4rem;
+    border-radius: 20%;
+    border: 10px;
+    border-color: white;
+}
+/*---------------------------*/
+#buscador{
+    width: 80%;
+}
+.buscadorReservas {
+    background-color: #fff;
+    padding: 0 10% 0 10%;
+    border-radius: 300px;
+}
+
+/*input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+} */

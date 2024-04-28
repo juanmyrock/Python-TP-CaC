@@ -9,10 +9,10 @@
     </head>
     <body>
         <header>
-            <div id="carouselContainer" class="container-fluid">
-                <div id="carouselAuto" class="carousel slide position-relative d-flex align-items-start justify-content-center" data-bs-ride="carousel" data-bs-touch="false">
+            <div id="carouselContainer" class="container-fluid position-relative">
+                <div id="carouselAuto" class="carousel slide d-flex align-items-start justify-content-center" data-bs-ride="carousel" data-bs-touch="false">
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="0" class="active btn-lg" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="img/salta.jpg" class="img-fluid d-block w-100 opacidad alt="Valles Calchaquíes">
+                            <img src="img/salta.jpg" class="img-fluid d-block w-100 opacidad" alt="Valles Calchaquies">
                             <div class="carousel-caption d-none d-md-block">
                                 <h2>Valle Calchaquíes, Salta</h2>
                             </div>
@@ -38,10 +38,10 @@
                     </div>
                     <nav class="container-fluid position-absolute text-center text-light" id="barraNav">
                         <div class="row align-items-end">
-                            <div class="col-3 nav-item d-flex align-items-end justify-content-center">
-                                <img src="img/explorArg.png" alt="Logo" width="40" height="40" class="d-inline-block align-top"><h4>ExplorArg</h4>
+                            <div id="logotipo" class="col-sm-12 col-md-12 col-lg-3 nav-item d-flex align-items-end justify-content-center">
+                                <img src="img/explorArg.png" alt="Logo" width="40" height="40" class="d-inline-block align-top"><h2>ExplorArg</h2>
                             </div>
-                            <div class="col-6">
+                            <div class="col-sm-12 col-md-11 col-lg-6">
                                 <ul class="nav nav-underline justify-content-center">
                                     <li class="nav-item dropdown">
                                         <button class="btn btn-outline-light" data-bs-toggle="dropdown" aria-expanded="false">Destinos</button>
@@ -68,7 +68,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm-12 col-md-2 col-lg-3 ">
                                 <ul class="nav nav-pills justify-content-center">
                                     <li class="nav-item">
                                         <a class="nav-link">Log In 
@@ -84,6 +84,74 @@
         </header>
         <main>
             <section>
+                <nav class="conteiner-xs" id="buscador">
+                    <div class="conteiner-xs">
+                        <div class="row">
+                            <div class="col"><h1>Reserva tu vuelo</h1></div>
+                        </div>
+                    </div>
+                    <div class="conteiner-xs">
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="ida-vuelta">Ida y vuelta</label>
+                                <input type="radio">
+                            </div>
+                            <div class="col-2">
+                                <label for="">Solo ida</label>
+                                <input type="radio">
+                            </div>
+                        </div>
+                    </div>
+                    <form class="buscadorReservas">
+                        <div class="row">
+                            <div class="col-2">
+                                <label for="origen">Origen:</label>
+                                <input type="text" id="origen" placeholder="Ingresa ciudad, país o región">
+                            </div>
+                            <div class="col-2">
+                                <label for="destino">Destino:</label>
+                                <input type="text" id="destino" placeholder="Probá buscando &quot;España&quot;">
+                            </div>
+                            <div class="col-2">
+                                <label for="ida">Fecha de Ida:</label>
+                                <input type="date" id="ida" value="2024-05-01">
+                            </div>
+                            <div class="col-2">
+                                <label for="vuelta">Fecha de Vuelta:</label>
+                                <input type="date" id="vuelta" value="2024-05-08">
+                            </div>
+                            <div class="col-2">
+                                <label for="cantidad" class="">
+                                    <ul class="">
+                                        <li class="dropdown">
+                                            <button class="" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                            <ul class="dropdown-menu dropdown-menu-light">
+                                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </label>
+                                <!-- <input id="cant" class="form-control" type="number" name="cant" min="1" max="20" placeholder="Cantidad de Pasajes" /> -->
+                            </div>
+                            <div class="col-2">
+                                <button class="btn btn-lg btn-warning" type="submit">Buscar</button>
+                            </div>
+                        </div> 
+                    </form>
+                    <div class="conteiner-xs-12">
+                        <div class="col-12 form-check justify-content-center">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </section>  
         </main>
 
