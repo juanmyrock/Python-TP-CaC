@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TripTravel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,8 +33,10 @@
 
     <main>
         <section>
-                <!--Carrousel (Imagenes y texto)-->
-            <div id="carouselSlidesOnly" class="carousel slide position-relative d-flex align-items-center justify-content-end" data-bs-ride="carousel">
+            <!--Carrousel (Imagenes y texto)-->
+            <div id="carouselSlidesOnly"
+                class="carousel slide position-relative d-flex align-items-center justify-content-end"
+                data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/lugar1.png" class="d-block w-100 opacidad" alt="Img 1">
@@ -44,90 +48,79 @@
                         <img src="img/lugar3.png" class="d-block w-100 opacidad" alt="Img 3">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlidesOnly" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlidesOnly"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlidesOnly" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlidesOnly"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
-            <div>
-            <div class="search-container">
-                <h1>Nuestros Destinos</h1>
-                <label for="ida-vuelta">Ida y vuelta</label>
-                <input type="radio">
+                <div>
+                    <div class="search-container">
+                        <h1>Nuestros Destinos</h1>
+                        <label for="ida-vuelta">Ida y vuelta</label>
+                        <input type="radio">
 
-                <label for="">Solo ida</label>
-                <input type="radio" name="" id="">
+                        <label for="">Solo ida</label>
+                        <input type="radio" name="" id="">
 
-                <div class="search-container">
-                    <form>
-                        <input type="text" id="origen" name="origen" placeholder="Origen">
-                        <input type="text" id="destino" name="destino" placeholder="Destino">
-                        <input type="date" id="fecha" name="fecha">
-                        <button type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
+                        <div class="search-container">
+                            <form>
+                                <input type="text" id="origen" name="origen" placeholder="Origen">
+                                <input type="text" id="destino" name="destino" placeholder="Destino">
+                                <input type="date" id="fecha" name="fecha">
+                                <button type="submit">Buscar</button>
+                            </form>
+                        </div>
+                    </div>
         </section>
-
-        <!-- CARRUSEL -->
-        <!-- estaba pensando hacer un carrusel como el de turismocity -->
-        <div>
-            <img src="/img/lugar1.png" alt="Thailandia">
-            <p> IDA Y VUELTA</p>
-            <H2>Lugar</H2>
-            <p>Precio <span>0</span></p>
-        </div>
-
-        <div>
-            <img src="/img/lugar2.png" alt="Japan">
-            <p> IDA Y VUELTA</p>
-            <H2>Lugar</H2>
-            <p>Precio <span>0</span></p>
-        </div>
-
-        <div>
-            <img src="/img/lugar3.png" alt="BS.AS">
-            <p> IDA Y VUELTA</p>
-            <H2>Lugar</H2>
-            <p>Precio <span>0</span></p>
-        </div>
 
         <!-- DESTINOS -->
         <section>
-
+        
             <h2>Explora el mundo con nosotros</h2>
-            
-            <!-- en turismocity vi la etiqueta <figure> y <figcation> y la estaba probando -->
-            <a href="#">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </a>
 
-            <a href="#">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </a>
+            <div  class="destinos">
 
-            <a href="#">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </a>
+                <a href="">
+                    <figure>
+                        <img src="/img/lugar1.png" alt="Tailandia" class="img">
+                        <figcaption>
+                            <h3>Tailandia
+                                <br>
+                                $180.000
+                            </h3>
+                            <p>Desde Buenos Aires</p>
+                        </figcaption>
+                    </figure>
+                </a>
 
-            <a href="#">
-                <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figure>
-            </a>
+                <a href="#">
+                    <figure>
+                        <img src="/img/lugar2.png" alt="Tokyo" class="img">
+                        <figcaption><h3>/.</h3></figcaption>
+                    </figure>
+                </a>
+
+                <a href="#">
+                    <figure>
+                        <img src="/img/lugar3.png" alt="Buenos Aires" class="img">
+                        <figcaption></figcaption>
+                    </figure>
+                </a>
+
+                <a href="#">
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </a>
+
+            </div>
+
         </section>
 
         <!-- PAQUETES -->
@@ -150,6 +143,30 @@
 
         <!-- REGISTRO -->
         <section>
+            <h2 class="ola">Regístrate y recibí recomendaciones, tips y más para viajar barato</h2>
+
+            <form action="" method="post">
+                <label for="a">Nombre y Apellido:</label>
+                <input type="text" id="a" placeholder="Escriba nombre y apellido aquí...">
+                <br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email">
+                <br>
+
+                <label for=""></label>
+                <input type="text">
+                <br>
+
+                <label for=""></label>
+                <input type="text">
+                <br>
+
+                <label for=""></label>
+                <input type="text">
+                <br>
+
+            </form>
 
         </section>
 
@@ -159,8 +176,12 @@
 
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
