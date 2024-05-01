@@ -84,21 +84,22 @@
         </header>
         <main>
             <section>
+                <h5>Buscador: </h5>
                 <nav class="conteiner-xs" id="buscador">
                     <div class="conteiner-xs">
                         <div class="row">
-                            <div class="col"><h1>Reserva tu vuelo</h1></div>
+                            <div class="col"><h2 style="color: white">Reserva tu vuelo</h2></div>
                         </div>
                     </div>
                     <div class="conteiner-xs">
                         <div class="row">
                             <div class="col-2">
-                                <label for="ida-vuelta">Ida y vuelta</label>
-                                <input type="radio">
+                                <label>Ida y vuelta</label>
+                                <input value="ida-vuelta" type="radio" name="ida-vuelta">
                             </div>
                             <div class="col-2">
-                                <label for="">Solo ida</label>
-                                <input type="radio">
+                                <label>Solo ida</label>
+                                <input value="solo-ida" type="radio" name="ida-vuelta">
                             </div>
                         </div>
                     </div>
@@ -106,33 +107,31 @@
                         <div class="row">
                             <div class="col-2">
                                 <label for="origen">Origen:</label>
-                                <input type="text" id="origen" placeholder="Ingresa ciudad, país o región">
+                                <input id="origen" type="text" placeholder="Ingresa ciudad, país o región">
                             </div>
                             <div class="col-2">
                                 <label for="destino">Destino:</label>
-                                <input type="text" id="destino" placeholder="Probá buscando &quot;España&quot;">
+                                <input id="destino" type="text" placeholder="Probá buscando &quot;España&quot;">
                             </div>
                             <div class="col-2">
                                 <label for="ida">Fecha de Ida:</label>
-                                <input type="date" id="ida" value="2024-05-01">
+                                <input id="ida" type="date" value="2024-05-01">
                             </div>
                             <div class="col-2">
                                 <label for="vuelta">Fecha de Vuelta:</label>
-                                <input type="date" id="vuelta" value="2024-05-08">
+                                <input id="vuelta" type="date" value="2024-05-08">
                             </div>
                             <div class="col-2">
-                                <label for="cantidad" class="">
-                                    <ul class="">
-                                        <li class="dropdown">
-                                            <button class="" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                            <ul class="dropdown-menu dropdown-menu-light">
-                                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </label>
+                                <ul id="cantidadPasajeros">
+                                    <li class="dropdown">
+                                        <button class="" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                        <ul class="dropdown-menu dropdown-menu-light">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 <!-- <input id="cant" class="form-control" type="number" name="cant" min="1" max="20" placeholder="Cantidad de Pasajes" /> -->
                             </div>
                             <div class="col-2">
