@@ -1,42 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 .header {
     background-color: #353A40;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
+    padding: 15px; }
+
+body {
+    background-color: #101820;
+    margin: 0;
+    padding: 0;
 }
+header {
+    position: relative;
+    background-color: #101820;
+}
+#carouselContainer {
+    background-color: #101820;
 
-/*-----------------------------------------*/
-
+}
 .carousel-inner .opacidad {
-    opacity: 0.4;
+    opacity: 0.6;
 }
 .carousel-inner {
     overflow: hidden;  
 }
-.carousel-inner img {
-    height: 100%;
-    object-fit: cover;
-    margin-top: -12%;
-    margin-bottom: -6%;
+.carousel-inner img{
+    width: auto;
+    height: 80%;
 }
-#carouselSlidesOnly {
-    background-color: black;
+.nav-link, .nav-item{
+    color: white;
 }
-.carousel-control-prev, .carousel-control-next {
-    top: 83%; 
-    bottom: auto;
-    right: 0px;
+#barraNav{
+    padding: 5%;
 }
-.carousel-control-prev {
-    left: auto;
-    right: 70px; 
+#barraNav li{
+    font-weight: bold;
+}
+#logotipo{
+    gap: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#logotipo img{
+    width: auto;
+    height: 4rem;
+    border-radius: 20%;
+    border: 10px;
+    border-color: white;
+}
+/*---------------------------*/
+#buscador{
+    width: 80%;
+}
+.buscadorReservas {
+    background-color: #fff;
+    padding: 0 10% 0 10%;
+    border-radius: 300px;
 }
 
 /*-------------------------------------------*/
