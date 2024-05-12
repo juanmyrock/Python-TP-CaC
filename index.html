@@ -11,11 +11,13 @@
         <header>
             <div id="carouselContainer" class="container-fluid position-relative">
                 <div id="carouselAuto" class="carousel slide d-flex align-items-start justify-content-center" data-bs-ride="carousel" data-bs-touch="false">
+                    <!--Acá van los botones inferiores que seleccionan la página del Slide a mostrar en pantalla  -->
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="0" class="active btn-lg" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="1" aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselAuto" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    <!-- Acá van la cantidad de Slides junto con sus respectivas imágenes -->
                     <div class="carousel-inner w-100">
                         <div class="carousel-item active" data-bs-interval="2000">
                             <img src="img/cataratas.jpg" class="img-fluid d-block w-100 opacidad" alt="Cataratas del Iguazú">
@@ -36,126 +38,433 @@
                             </div>
                         </div>
                     </div>
-                    <nav class="container-fluid position-absolute text-center text-light" id="barraNav">
-                        <div class="row align-items-end">
-                            <div id="logotipo" class="col-sm-12 col-md-12 col-lg-3 nav-item d-flex align-items-end justify-content-center">
-                                <img src="img/explorArg.png" alt="Logo" width="40" height="40" class="d-inline-block align-top"><h2>ExplorArg</h2>
-                            </div>
-                            <div class="col-sm-12 col-md-11 col-lg-6">
-                                <ul class="nav nav-underline justify-content-center">
-                                    <li class="nav-item dropdown">
-                                        <button class="btn btn-outline-light" data-bs-toggle="dropdown" aria-expanded="false">Destinos</button>
-                                        <ul class="dropdown-menu dropdown-menu-dark">
-                                            <li><a class="dropdown-item" href="#">Buenos Aires</a></li>
-                                            <li><a class="dropdown-item" href="#">Córdoba</a></li>
-                                            <li><a class="dropdown-item" href="#">Mendoza</a></li>
+                    <!-- Acá arrancan los dos NAV -->
+                    <div id="Navegadores" class="container-fluid position-absolute">
+                        <div class="row">
+                            <!-- Navegador Principal -->
+                            <nav id="barraNav" class="container-fluid text-center text-light">
+                                <div class="row align-items-end">
+                                    <div id="logotipo" class="col-sm-12 col-md-12 col-lg-3 nav-item d-flex align-items-end justify-content-center">
+                                        <img src="img/explorArg.png" alt="Logo" width="40" height="40" class="d-inline-block align-top"><h2>ExplorArg</h2>
+                                    </div>
+                                    <div class="col-sm-12 col-md-11 col-lg-6">
+                                        <ul class="nav nav-underline justify-content-center">
+                                            <li class="nav-item dropdown">
+                                                <button class="btn btn-outline-light" data-bs-toggle="dropdown" aria-expanded="false">Destinos</button>
+                                                <ul class="dropdown-menu dropdown-menu-dark">
+                                                    <li><a class="dropdown-item" href="#">Buenos Aires</a></li>
+                                                    <li><a class="dropdown-item" href="#">Córdoba</a></li>
+                                                    <li><a class="dropdown-item" href="#">Mendoza</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Vuelos</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Paquetes</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Hoteles</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Actividades</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Autos</a>
+                                            </li>
                                         </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Vuelos</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Paquetes</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Hoteles</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Actividades</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Autos</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-12 col-md-2 col-lg-3 ">
-                                <ul class="nav nav-pills justify-content-center">
-                                    <li class="nav-item">
-                                        <a class="nav-link">Log In 
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></svg>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>     
-                    </nav> 
+                                    </div>
+                                    <div class="col-sm-12 col-md-2 col-lg-3 ">
+                                        <ul class="nav nav-pills justify-content-center">
+                                            <li class="nav-item">
+                                                <a class="nav-link">Log In 
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 20 20"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>     
+                            </nav>
+                        </div>
+                        <div class="row">
+                            <!-- Buscador de Vuelos -->
+                            <nav id="navBuscador" class="conteiner-xs text-light" id="buscador">
+                                <div class="conteiner-xs"> <!-- Título -->
+                                    <div class="row">
+                                        <div class="col"><h2 style="color: white">Reserva tu vuelo</h2></div>
+                                    </div>
+                                </div>
+                                <div class="conteiner-xs"> <!-- RadioButtons selectores -->
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label>Ida y vuelta</label>
+                                            <input value="ida-vuelta" type="radio" name="ida-vuelta">
+                                        </div>
+                                        <div class="col-2">
+                                            <label>Solo ida</label>
+                                            <input value="solo-ida" type="radio" name="ida-vuelta">
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="buscadorReservas"> <!-- Formulario del buscador -->
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <label for="origen">Origen:</label>
+                                            <input id="origen" type="text" placeholder="Ingresa ciudad, país o región">
+                                        </div>
+                                        <div class="col-2">
+                                            <label for="destino">Destino:</label>
+                                            <input id="destino" type="text" placeholder="Probá buscando &quot;España&quot;">
+                                        </div>
+                                        <div class="col-2">
+                                            <label for="ida">Fecha de Ida:</label>
+                                            <input id="ida" type="date" value="2024-05-01">
+                                        </div>
+                                        <div class="col-2">
+                                            <label for="vuelta">Fecha de Vuelta:</label>
+                                            <input id="vuelta" type="date" value="2024-05-08">
+                                        </div>
+                                        <div class="col-2">
+                                            <ul id="cantidadPasajeros">
+                                                <li class="dropdown">
+                                                    <button class="" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                                    <ul class="dropdown-menu dropdown-menu-light">
+                                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <!-- <input id="cant" class="form-control" type="number" name="cant" min="1" max="20" placeholder="Cantidad de Pasajes" /> -->
+                                        </div>
+                                        <div class="col-2">
+                                            <button class="btn buscarbutton btn-lg btn-warning" type="submit">Buscar</button>
+                                        </div>
+                                    </div> 
+                                </form>
+                                <div class="conteiner-xs-12">
+                                    <div class="col-12 form-check justify-content-center">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            Agree to terms and conditions
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </header>
         <main>
             <section>
-                <h5>Buscador: </h5>
-                <nav class="conteiner-xs" id="buscador">
-                    <div class="conteiner-xs">
-                        <div class="row">
-                            <div class="col"><h2 style="color: white">Reserva tu vuelo</h2></div>
-                        </div>
-                    </div>
-                    <div class="conteiner-xs">
-                        <div class="row">
-                            <div class="col-2">
-                                <label>Ida y vuelta</label>
-                                <input value="ida-vuelta" type="radio" name="ida-vuelta">
-                            </div>
-                            <div class="col-2">
-                                <label>Solo ida</label>
-                                <input value="solo-ida" type="radio" name="ida-vuelta">
+                <div class="cards">
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card1-playaRioNegro.jpg" alt="Playa de Río Negro preview">
+                            <div class="card__price">
+                                $4,750,000
                             </div>
                         </div>
-                    </div>
-                    <form class="buscadorReservas">
-                        <div class="row">
-                            <div class="col-2">
-                                <label for="origen">Origen:</label>
-                                <input id="origen" type="text" placeholder="Ingresa ciudad, país o región">
-                            </div>
-                            <div class="col-2">
-                                <label for="destino">Destino:</label>
-                                <input id="destino" type="text" placeholder="Probá buscando &quot;España&quot;">
-                            </div>
-                            <div class="col-2">
-                                <label for="ida">Fecha de Ida:</label>
-                                <input id="ida" type="date" value="2024-05-01">
-                            </div>
-                            <div class="col-2">
-                                <label for="vuelta">Fecha de Vuelta:</label>
-                                <input id="vuelta" type="date" value="2024-05-08">
-                            </div>
-                            <div class="col-2">
-                                <ul id="cantidadPasajeros">
-                                    <li class="dropdown">
-                                        <button class="" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                                        <ul class="dropdown-menu dropdown-menu-light">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- <input id="cant" class="form-control" type="number" name="cant" min="1" max="20" placeholder="Cantidad de Pasajes" /> -->
-                            </div>
-                            <div class="col-2">
-                                <button class="btn btn-lg btn-warning" type="submit">Buscar</button>
-                            </div>
-                        </div> 
-                    </form>
-                    <div class="conteiner-xs-12">
-                        <div class="col-12 form-check justify-content-center">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Agree to terms and conditions
-                            </label>
-                            <div class="invalid-feedback">
-                                You must agree before submitting.
+                        <div class="card__content">
+                            <h2 class="card__title">Río Negro</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    3 Bed | 2 Bath | 7,500 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
-                    </div>
-                </nav>
-            </section>  
+                    </article>
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card2-cordoba.jpg" alt="Córdoba preview">
+                            <div class="card__price">
+                                $4,500,000
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h2 class="card__title">Córdoba</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    4 Bed | 2 Bath | 7,000 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card3-glaciar.jpg" alt="Glaciares preview">
+                            <div class="card__price">
+                                $5,200,000
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h2 class="card__title">Glaciares</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    3 Bed | 3 Bath | 3,000 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card4-jujuy-argentina-cerrosColores.jpg" alt="Cerros Jujuy preview">
+                            <div class="card__price">
+                                $5,200,000
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h2 class="card__title">Jujuy</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    3 Bed | 3 Bath | 3,000 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card5-ushuaia.jpg" alt="Ushuaia preview">
+                            <div class="card__price">
+                                $5,200,000
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h2 class="card__title">Ushuaia</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    3 Bed | 3 Bath | 3,000 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card__preview">
+                            <img src="img/card6-buenosaires.jpg" alt="Buenos Aires preview">
+                            <div class="card__price">
+                                $5,200,000
+                            </div>
+                        </div>
+                        <div class="card__content">
+                            <h2 class="card__title">Buenos Aires</h2>
+                            <p class="card__address">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <div class="card__bottom">
+                                <div class="card__properties">
+                                    3 Bed | 3 Bath | 3,000 sq. ft
+                                </div>
+                                <button class="card__btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
-asdasd
+        <footer class="footer">
+            <!-- Linea de arriba del footer -->
+            <div class="footer-line"></div>
+    
+            <div class="footer-wrapper">
+                
+                <section class="footer-top">
+                    <div class="footer-headline">
+                        <h2>Recibí novedades</h2>
+                        <p>
+                            Ofertas Destinos Paquetes
+                        </p>
+                    </div>
+                    <!-- Separador visual -->
+                    <div class="separator"></div>
+    
+                    <!-- Para suscribirse -->
+                    <div class="footer-subscribe">
+                        <input type="email" spellcheck="false" placeholder="Tu Email">
+                        <button>
+                            Enviar
+                        </button>
+                    </div>
+                </section>
+    
+                <!-- Preguntas frecuentes -->
+                <h2 id="FAQ_titulo">Preguntas frecuentes - FAQ</h2>
+                
+                <!-- Preguntas -->
+                <div class="faq">
+                    <button class="faq-toggle">¿Cómo conseguir vuelos baratos?</button>
+                    <div class="faq-content">
+                        <p>Para conseguir vuelos baratos en ExplorArg, lo primero que tenés que hacer es registrarte desde el sitio con tu email o descargarte nuestra App para que te lleguen todas las alertas de vuelos baratos que mandamos. Además, también podés crearte alertas personalizadas que te avisen cuando el vuelo que querés comprar baja de precio.</p>
+                    </div>
+                </div>
+                
+                <div class="faq">
+                    <button class="faq-toggle">¿Cómo me entero de las promociones?</button>
+                    <div class="faq-content">
+                        <p>Para enterarte de las mejores promociones, te sugerimos registrarte desde el sitio o descargarte la App para recibir las alertas de vuelos baratos que enviamos</p>
+                    </div>
+                </div>
+                
+                
+                <div class="footer-columns">
+                    <section>
+                        <h3>Vuelos Nacionales</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Vuelos a Salta" onclick="return false;">Vuelos a Salta</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Vuelos a Mendoza" onclick="return false;">Vuelos a Mendoza</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Vuelos a Usuahia" onclick="return false;">Vuelos a Usuahia</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Vuelos a Córdoba" onclick="return false;">Vuelos a Córdoba</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Vuelos a Nuequén" onclick="return false;">Vuelos a Neuquén</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Sobre nosotros</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="¿Quiénos somos?" onclick="return false;">¿Quiénes somos?  </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Blog" onclick="return false;">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#FAQ_titulo" title="FAQ" onclick="return false;">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Prensa" onclick="return false;">Prensa</a>
+                            </li>
+                            <li>
+                                <a href="#" title="Contact0" onclick="return false;">Contacto</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Legal</h3>
+                        <ul>
+                            <li>
+                                <a href="#" title="Terminos y servicios" onclick="return false;">
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Privacidad" onclick="return false;">
+                                    Privacidad
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Cookies" onclick="return false;">
+                                    Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Licencia" onclick="return false;">
+                                    Licencia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Otros" onclick="return false;">
+                                    Otros
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="footer-bottom">
+                    <small>© ExplorArg Ltd. <span id="year"></span>, All rights reserved</small>
+                    <span class='social-links'>
+                        <a href="#" title="Instagram" onclick="return false;" >
+                            <img src="img/instagram.svg" alt='Instagram' >                       
+                        </a>
+                        <a href="#" title="Linkedin" onclick="return false;"> 
+                            <img src="img/linkedin.svg" alt='Linkedin'>
+                        </a>
+                        <a href="#" title="Twitter" onclick="return false;">
+                            <img src="img/twitter.svg" alt='Twitter'>
+                        </a>
+                        <a href="#" title="Youtube" onclick="return false;">
+                            <img src="img/youtube.svg" alt='YouTube'>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
 
+        <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
