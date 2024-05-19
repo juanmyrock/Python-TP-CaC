@@ -16,28 +16,30 @@
     padding: 15px; }
 
 body {
-    background-color: #101820;
     margin: 0;
     padding: 0;
+    background-color: #101820; 
 }
 header {
     position: relative;
     background-color: #101820;
 }
-#carouselContainer {
-    background-color: #101820;
 
 }
+/*----Carousel----*/
 .carousel-inner .opacidad {
     opacity: 0.6;
 }
 .carousel-inner {
-    overflow: hidden;  
+    background-color: #101820;
+    overflow: hidden;
+    height: 100vh;  
 }
-.carousel-inner img{
-    width: auto;
-    height: 80%;
+.carousel-inner .carousel-item{
+    position: static;
 }
+
+/*----Navegador Principal----*/
 .nav-link, .nav-item{
     color: white;
 }
@@ -58,41 +60,298 @@ header {
     border: 10px;
     border-color: white;
 }
-/*---------------------------*/
-#buscador{
-    width: 80%;
+/*-------Buscador Vuelos-------*/
+#navBuscador{
+    width: 75%;
+    position: absolute;
+    left: 13%;
 }
 .buscadorReservas {
     background-color: #fff;
     padding: 0 10% 0 10%;
     border-radius: 300px;
 }
+.buscarbutton {
+    border-radius: 100px;
+    color: #fff;
+    margin-top: 2%;
+}
 
-/*-------------------------------------------*/
-.destinos{
-    display: flex;
-}
-figure{
-    max-width: 800px;
-            margin: 0 auto;
-            position: relative; 
-}
-.img{
+input, select {
     width: 100%;
-    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
-figcaption{
+/*----------------MAIN-----------------*/
+
+/*----Galería de Cards----*/
+section{
+    --white: #fff;
+    --text: #262626;
+    --like: #FF3040;
+
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    padding: 1rem;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.card {
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    display: flex;
+    width: 20rem;
+    
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover {
+    box-shadow: rgba(242, 242, 242, 0.1) 0px 6px 16px;
+}
+.card__preview {
+    height: 12rem;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.card__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-out;
+}
+.card:hover .card__preview img {
+    transform: scale(1.15);
+}
+.card__price {
+    background-color: var(--white);
+    color: var(--text);
+    z-index: 10;
     position: absolute;
-    bottom: 0;
+    bottom: 1.25rem;
+    padding: 0rem 0.5rem;
+    border-radius: 0.5rem;
+    left: 1.25rem;
+    font-weight: bold;
+}
+.card__content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: var(--text);
+}
+.card__bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+.card__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__btn svg {
+    height: 2rem;
+    width: 2rem;
+    stroke: var(--text);
+    stroke-width: 1.5px;
+}
+.card__btn--like svg {
+    stroke: var(--like);
+    fill: var(--like);
+}
+
+
+/*----Galería 2----*/
+.cards2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.card2 {
+    border-color: var(--white);
+    border-style: solid;
+    border-radius: 1.5rem;
+    border-width: 1.4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    display: flex;
+    width: 16rem;
+    
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+.card2:hover {
+    box-shadow: rgba(242, 242, 242, 0.1) 0px 6px 16px;
+}
+.card2_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-out;
+    opacity: 0.8;
+}
+.card2:hover .card2_preview img {
+    transform: scale(1.15);
+}
+.card2_price {
+    background-color: transparent;
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--text);
+    z-index: 1;
+    position: absolute;
+    bottom: 0.5rem;
+    padding: 0rem 0.5rem;
+    left: 1.25rem;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+.card2_content {
+    color: var(--white);
+    text-shadow: 1px 1px 2px black;
+    z-index: 1;
+    position: absolute;
+    padding: 0 0 0 0.5rem;
+    left: 1.3rem;
+    bottom: 2.7rem;
+    font-weight: bold;
+}
+.card2_description{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    color: var(--white);
+    text-shadow: 1px 1px 4px var(--text);
+    z-index: 1;
+    position: absolute;
+    padding: 0 0 0 0.5rem;
+    left: 1.5rem;
+    bottom: -0.5rem;
+    font-style: italic;
+    font-size: x-small;
+}
+.card2_description p {
+    padding-left: 5px;
+    font-style: normal;
+}
+.card2_btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    bottom: 1.25rem;
+    padding: 0 0 0 0.4rem;
+    right: 1rem;
+}
+.card2_btn svg {
+    height: 2rem;
+    width: 2rem;
+    stroke: var(--white);
+    stroke-width: 1.8px;
+}
+.card2_btn--like svg {
+    stroke: var(--like);
+    fill: var(--like);
+}
+
+
+/*----Galería Actividades----*/
+.actividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.gallery {
+    display: flex;
+    gap: 1rem;
+}
+.card3 {
+    position: relative;
     left: 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #ffffff;
+    width: 9rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    transition: 1000ms all;
+    transform-origin: center left;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid var(--background);
+    overflow: hidden;
+}
+.card3 img {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+.card3:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+.card3 figcaption {
+    font-size: 1rem;
+    position: absolute;
+    height: 5rem;
+    width: 10rem;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: var(--white);
+    left: 0;
+    bottom: 0;
+    padding-left: 0.75rem;
+    padding-bottom: 0.65rem;
+}
+.card3:hover ~ .card {
+    font-weight: bold;
+    text-shadow: 1px 1px 4px var(--text);
+    cursor: pointer;
+    transform: translateX(1.3rem);
+}
+
+/*-----------------FOOTER------------------*/
+footer {
+    --text-color: #140202; 
+    --footer-background: #4b90da;
+    --footer-background-h: #062649;
+    --text-gray: #021120;
+    font-family: Mulish;
     font-size: 16px;
 }
-
-/* Empieza footer */
 
 #FAQ_titulo{
     text-align: center;
@@ -108,10 +367,8 @@ figcaption{
 }
 
 .footer {
-    /* position: absolute; */
     bottom: 0;
     background-color: var(--footer-background);
-
     min-width: 18rem;
     width: 100vw;
     bottom: 0;
@@ -132,7 +389,6 @@ figcaption{
 }
 /* ES el que contiene al correo y dice del newsletter */
 .footer-top {
-    /* background-color: black; */
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -146,14 +402,10 @@ figcaption{
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    /* background-color: black; */
 }
 
 .footer-subscribe > input {
-    /* background-color: blue; */
     border: 1px solid var(--text-gray);
-
-
     color: var(--text-color);
     min-height: 2.25rem;
     font-size: 1.2rem;
@@ -163,10 +415,8 @@ figcaption{
 }
 
 .footer-subscribe > button {
-    /* background-color: black; */
     cursor: pointer;
     background-color: rgb(15, 15, 15);
-    /* background: var(--text-color); */
     border-radius: 0.5rem;
     color: white;
     font-size: 1.25rem;
@@ -188,15 +438,12 @@ figcaption{
     display: block;
 }
 .faq-toggle {
-    /* background-color: #221f1f; */
     background-color: var(--footer-background);
-    /* border: none; */
     padding: 10px 20px;
     margin: 5px 0;
     cursor: pointer;
     width: 100%;
     text-align: left;
-
     border: 2px solid #ccc;
     border-radius: 10px; /* Agrega bordes redondeados */
     padding: 10px;
@@ -344,6 +591,3 @@ figcaption{
         margin: 0 auto;
     }
 }
-
-
-
