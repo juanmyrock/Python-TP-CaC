@@ -1,25 +1,24 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #101820; 
 }
 header {
     position: relative;
-    background-color: #101820;
 }
 /*----Carousel----*/
-#carouselContainer {
-    background-color: #101820;
-}
 .carousel-inner .opacidad {
     opacity: 0.6;
 }
 .carousel-inner {
-    overflow: hidden;  
+    background-color: #101820;
+    overflow: hidden;
+    height: 100vh;  
 }
-.carousel-inner img{
-    width: auto;
-    height: 80%;
+.carousel-inner .carousel-item{
+    position: static;
 }
+
 /*----Navegador Principal----*/
 .nav-link, .nav-item{
     color: white;
@@ -42,8 +41,10 @@ header {
     border-color: white;
 }
 /*-------Buscador Vuelos-------*/
-#buscador{
-    width: 80%;
+#navBuscador{
+    width: 75%;
+    position: absolute;
+    left: 13%;
 }
 .buscadorReservas {
     background-color: #fff;
@@ -67,20 +68,15 @@ input, select {
 
 /*----Galería de Cards----*/
 section{
-    --primary: #111926;
     --white: #fff;
-    --background: #F8F8FF;
-    --gray: #D3D3D3;
     --text: #262626;
     --like: #FF3040;
 
-    background-color: var(--background);
     justify-content: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    height: 100vh;
+    height: 100%;
     padding: 1rem;
-    margin-bottom: 10%;
 }
 .cards {
     display: flex;
@@ -90,19 +86,18 @@ section{
     margin-top: 1rem;
 }
 .card {
-    background: var(--white);
     border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
     display: flex;
     width: 20rem;
-    height: 20rem;
+    
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 16px;
+    box-shadow: rgba(242, 242, 242, 0.1) 0px 6px 16px;
 }
 .card__preview {
     height: 12rem;
@@ -112,19 +107,17 @@ section{
 }
 .card__preview img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: all 0.4s ease-out;
 }
 .card:hover .card__preview img {
-    transform: scale(1.35);
-}
-.card__address {
-    margin-top: 0.8rem;
+    transform: scale(1.15);
 }
 .card__price {
     background-color: var(--white);
     color: var(--text);
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     bottom: 1.25rem;
     padding: 0rem 0.5rem;
@@ -137,7 +130,6 @@ section{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-
     color: var(--text);
 }
 .card__bottom {
@@ -170,6 +162,103 @@ section{
     fill: var(--like);
 }
 
+
+/*----Galería 2----*/
+.cards2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.card2 {
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 6px;
+    display: flex;
+    width: 16rem;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+.card2:hover {
+    box-shadow: rgba(242, 242, 242, 0.1) 0px 6px 16px;
+}
+.card2_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-out;
+    opacity: 0.8;
+}
+.card2:hover .card2_preview img {
+    transform: scale(1.15);
+}
+.card2_price {
+    background-color: transparent;
+    color: var(--white);
+    text-shadow: 1px 1px 2px var(--text);
+    z-index: 1;
+    position: absolute;
+    bottom: 0.5rem;
+    padding: 0rem 0.5rem;
+    left: 1.25rem;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+.card2_content {
+    color: var(--white);
+    text-shadow: 1px 1px 2px black;
+    z-index: 1;
+    position: absolute;
+    padding: 0 0 0 0.5rem;
+    left: 1.3rem;
+    bottom: 2.7rem;
+    font-weight: bold;
+}
+.card2_description{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    color: var(--white);
+    text-shadow: 1px 1px 4px var(--text);
+    z-index: 1;
+    position: absolute;
+    padding: 0 0 0 0.5rem;
+    left: 1.5rem;
+    bottom: -0.5rem;
+    font-style: italic;
+    font-size: x-small;
+}
+.card2_description p {
+    padding-left: 5px;
+    font-style: normal;
+}
+.card2_btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    bottom: 1.25rem;
+    padding: 0 0 0 0.4rem;
+    right: 1rem;
+}
+.card2_btn svg {
+    height: 2rem;
+    width: 2rem;
+    stroke: var(--white);
+    stroke-width: 1.8px;
+}
+.card2_btn--like svg {
+    stroke: var(--like);
+    fill: var(--like);
+}
 
 /*-----------------FOOTER------------------*/
 footer {
