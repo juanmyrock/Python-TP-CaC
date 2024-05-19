@@ -1,3 +1,20 @@
+:root {
+    --text-color: #140202; /* Aquí puedes especificar el color que desees */
+    --footer-background: #4b90da;
+    --footer-background-h: #062649;
+    --text-gray: #021120;
+  }
+  
+
+
+.header {
+    background-color: #353A40;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; }
+
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +22,9 @@ body {
 }
 header {
     position: relative;
+    background-color: #101820;
+}
+
 }
 /*----Carousel----*/
 .carousel-inner .opacidad {
