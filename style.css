@@ -264,6 +264,65 @@ section{
     fill: var(--like);
 }
 
+
+/*----Galería Actividades----*/
+.actividades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.gallery {
+    display: flex;
+    gap: 1rem;
+}
+.card3 {
+    position: relative;
+    left: 0;
+    width: 9rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    transition: 1000ms all;
+    transform-origin: center left;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid var(--background);
+    overflow: hidden;
+}
+.card3 img {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+.card3:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+.card3 figcaption {
+    font-size: 1rem;
+    position: absolute;
+    height: 5rem;
+    width: 10rem;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    color: var(--white);
+    left: 0;
+    bottom: 0;
+    padding-left: 0.75rem;
+    padding-bottom: 0.65rem;
+}
+.card3:hover ~ .card {
+    font-weight: bold;
+    text-shadow: 1px 1px 4px var(--text);
+    cursor: pointer;
+    transform: translateX(1.3rem);
+}
+
 /*-----------------FOOTER------------------*/
 footer {
     --text-color: #140202; 
