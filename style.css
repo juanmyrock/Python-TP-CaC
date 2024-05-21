@@ -1,6 +1,9 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body {
     background-color: #101820; 
 }
 header {
@@ -23,6 +26,9 @@ header {
 .nav-link, .nav-item{
     color: white;
 }
+.nav-link a:hover {
+    cursor: pointer;
+}
 #barraNav{
     padding: 5%;
 }
@@ -32,6 +38,8 @@ header {
 #logotipo{
     gap: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    bottom: 0;
 }
 #logotipo img{
     width: auto;
@@ -39,6 +47,8 @@ header {
     border-radius: 20%;
     border: 10px;
     border-color: white;
+    position: relative;
+    bottom: 0;
 }
 /*-------Buscador Vuelos-------*/
 #navBuscador{
@@ -324,250 +334,4 @@ section{
 }
 
 /*-----------------FOOTER------------------*/
-footer {
-    --text-color: #140202; 
-    --footer-background: #4b90da;
-    --footer-background-h: #062649;
-    --text-gray: #021120;
-    font-family: Mulish;
-    font-size: 16px;
-}
 
-#FAQ_titulo{
-    text-align: center;
-}
-.footer-line {
-    display: block;
-    width: 100%;
-    height: 0.5rem;
-    background: linear-gradient(
-        90deg,#2e65a5,
-        #605dff 50%,#ad63f6
-    );
-}
-
-.footer {
-    bottom: 0;
-    background-color: var(--footer-background);
-    min-width: 18rem;
-    width: 100vw;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px; /* Margen superior */
-    padding-top: 10px; /* Relleno en la parte superior */
-    opacity: 0.8;
-}
-
-.footer-wrapper {
-    display: flex;
-    background: var(--footer-background);
-    flex-direction: column;
-    max-width: 80rem;
-    padding: 1rem;
-}
-/* ES el que contiene al correo y dice del newsletter */
-.footer-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: start;
-    padding: 1rem 0px;
-    justify-content: space-between;
-}
-
-/* donde va el correo */
-.footer-subscribe {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.footer-subscribe > input {
-    border: 1px solid var(--text-gray);
-    color: var(--text-color);
-    min-height: 2.25rem;
-    font-size: 1.2rem;
-    flex: 1 0 8rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.5rem;
-}
-
-.footer-subscribe > button {
-    cursor: pointer;
-    background-color: rgb(15, 15, 15);
-    border-radius: 0.5rem;
-    color: white;
-    font-size: 1.25rem;
-    min-width: 8rem;
-    min-height: 2.25rem;
-    flex: 1 0 5rem;
-    white-space: nowrap;
-    padding: 0.5rem 0.75rem;
-    border: 0;
-    outline: none;
-}
-
-.faq-content {  
-    display: none;
-    padding: 10px;
-
-}
-.faq-content.active {
-    display: block;
-}
-.faq-toggle {
-    background-color: var(--footer-background);
-    padding: 10px 20px;
-    margin: 5px 0;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    border: 2px solid #ccc;
-    border-radius: 10px; /* Agrega bordes redondeados */
-    padding: 10px;
-    margin-bottom: 10px; /* Añade espacio entre las preguntas */
-
-}
-
-.faq-toggle:hover {
-    background-color: var(--footer-background-h);
-}
-
-
-/* ? footer columns */
-.footer-columns {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: start;
-    flex: 2 0 140px;
-    width: 100%;
-    gap: 1rem;
-    padding: 1.5rem 0.5rem 1rem 0.5rem;
-    margin: 0 auto;
-    border-top: 1px solid var(--text-gray);
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
-}
-
-
-.footer-columns ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-.footer-columns ul a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-.footer-columns ul a:hover{
-    text-decoration: underline;
-}
-
-.footer-columns ul li {
-    margin-bottom: 1rem;
-}
-
-.footer-columns section {
-    margin: 10px; /* Agrega un poco de espacio entre las columnas */
-}
-
-.footer-columns h3 {
-    color: var(--footer-heading-gray);
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.125rem;
-}
-.footer-centering {
-    margin: 0 auto;
-}
-
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid var(
-        --text-gray
-    );
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 1rem 0px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-}
-
-/* Copio desde acá */
-
-
-.footer-bottom > small {
-    font-size: 1rem;
-    margin: 0 0.25rem;
-} 
-
-.footer-headline > h2 {
-    margin: 0;
-}
-
-.footer-headline > p {
-    margin: 0.75rem 0px;
-}
-
-/* VER SI LO PONGO */
-.footer-headline {
-    margin-right: 20px; /* Espacio entre el texto y el formulario */
-}
-/* para separar  sección "Recibí novedades" del formulario para ingresar el correo electrónico */
-.separator {
-    width: 1px; /* Ancho del separador */
-    height: 40px; /* Altura del separador */
-    background-color: #ccc; /* Color del separador */
-    margin: 0 20px; /* Espacio entre el texto y el separador */
-}
-
-
-/*? socials */
-
-.social-links {
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-}
-
-.social-links img {
-    width: 1.5rem;
-    height: 1.5rem;
-    transition: all 0.2s ease-in-out;
-}
-
-.social-links img:hover {
-
-    transform: scale(1.2); /* Hacer que los íconos se agranden ligeramente al pasar el ratón sobre ellos */
-}
-
-/*? mobile */
-
-@media (max-width: 800px) {
-    .footer-top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 1rem 0.5rem 2rem 0.5rem;
-    }
-
-    .footer-bottom {
-
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: space-between;
-        justify-content: center;
-        margin: 0 auto;
-    }
-}
