@@ -8,6 +8,9 @@ body {
 }
 header {
     position: relative;
+    background-color: #101820;
+}
+
 }
 /*----Carousel----*/
 .carousel-inner .opacidad {
