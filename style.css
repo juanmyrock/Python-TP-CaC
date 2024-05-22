@@ -173,7 +173,43 @@ span:focus ~ .contenedor-drop {
     border-radius: 10px;
 }
 /*----------------MAIN-----------------*/
+.paquetes_ofertas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    color: #fff;
 
+}
+.paquetes_ofertas hr {
+    width: 20%;
+    color: #fff;
+    margin: 8px;
+}
+.promo_vuelos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    color: rgb(0, 0, 0);
+}
+.promo_vuelos hr {
+    width: 20%;
+    color: #fff;
+    margin: 8px;
+}
+.actividades_turist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+    color: #000000;
+}
+.actividades_turist hr {
+    width: 20%;
+    color: #000000;
+    margin: 8px;
+}
 /*----Galería de Cards----*/
 section{
     --white: #fff;
@@ -382,8 +418,9 @@ section{
     margin-top: 1rem;
 }
 .gallery {
-    display: flex;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px; /* Ajusta el espacio entre las tarjetas */
 }
 .card3 {
     position: relative;
@@ -431,5 +468,10 @@ section{
     transform: translateX(1.3rem);
 }
 
+.lineafin {
+    width: 99%;
+    color: #000000;
+    margin: 10px;
+}
 /*-----------------FOOTER------------------*/
 
