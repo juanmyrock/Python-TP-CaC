@@ -73,14 +73,12 @@ header {
     position: relative;
     justify-content: center;
     align-items: center;
-
 }
-:checked ~ .contenedor-drop {
+#botonDrop{
+    font-weight: bold;
+}
+span:focus ~ .contenedor-drop{
     display: block;
-}
-input.oculto[type=checkbox] {
-    position: absolute;
-    left: -999em;
 }
 .dropdown{
     display: block;
@@ -109,30 +107,50 @@ input.oculto[type=checkbox] {
 }
 .dropdown li a:hover{
     background: #262626;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 8px;
     text-decoration: none;
     list-style: none;
     display: inline-block;
     color: #fff;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 /*-------Buscador Vuelos-------*/
 #navBuscador {
-    width: 75%;
+    width: 80%;
     position: absolute;
-    left: 13%;
+    left: 10%;
     z-index: 5;
 }
-.buscadorReservas {
+.formContenedor {
     background-color: #fff;
-    padding: 0 10% 0 10%;
+    padding: 0% 0% 1% 2%;
     border-radius: 300px;
+    opacity: 0.7;
 }
-.buscarbutton {
-    border-radius: 100px;
+.formContenedor form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.formContenedor div {
+    width: 20rem;
+}
+.formulario button {
+    border-radius: 25px;
     color: #fff;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-left: 25%;
+}
+.formulario input {
+    padding: 8px;
+    border-radius: 15px;
+    border-width: 4px;
+    border-color: #262626;
+    margin-left: 20%;
+    margin-bottom: 7%;
+
 }
 
 input, select {

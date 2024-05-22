@@ -50,8 +50,7 @@
                                     </div>
                                     <div class="col-sm-12 col-md-11 col-lg-6">
                                         <ul class="nav nav-underline justify-content-center">
-                                            <label class="btn btn-outline-light" for="toggle-oculto1">Destinos</label>
-                                            <input type="checkbox" id="toggle-oculto1" class="oculto"/>
+                                            <span id="botonDrop" class="btn btn-outline-light" tabindex="0">Destinos</span>
                                             <div class="contenedor-drop">
                                                 <ul class="dropdown-menu dropdown">
                                                     <li><a  href="#">Buenos Aires</a></li>
@@ -120,29 +119,33 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form class="buscadorReservas"> <!-- Formulario del buscador -->
-                                    <div class="row">
-                                        <div class="col-2">
+                                <div class="formContenedor"> <!-- Formulario del buscador -->
+                                    <form class="formulario">
+                                        <div class="origen">
                                             <label for="origen">Origen:</label>
-                                            <input id="origen" type="text" placeholder="Ingresa ciudad, país o región">
+                                            <input id="id_origen" type="text" placeholder="Lugar de Salida">
                                         </div>
-                                        <div class="col-2">
+                                        
+                                        <div class="destino">
                                             <label for="destino">Destino:</label>
-                                            <input id="destino" type="text" placeholder="Probá buscando &quot;España&quot;">
+                                            <input id="id_destino" type="text" placeholder="Lugar de Destino">
                                         </div>
-                                        <div class="col-2">
+                                        
+                                        <div class="fecha_ida">
                                             <label for="ida">Fecha de Ida:</label>
-                                            <input id="ida" type="date" value="2024-05-01">
+                                            <input id="id_ida" type="date" value="">
                                         </div>
-                                        <div class="col-2">
+                                        
+                                        <div class="fecha_vuelta">
                                             <label for="vuelta">Fecha de Vuelta:</label>
-                                            <input id="vuelta" type="date" value="2024-05-08">
+                                            <input id="id_vuelta" type="date" value="">
                                         </div>
-                                        <div class="col-2">
-                                            <button class="btn buscarbutton btn-lg btn-warning" type="submit">Buscar</button>
+
+                                        <div class="btnBuscar">
+                                            <button class="btn btn-lg btn-warning" type="submit">Buscar</button>
                                         </div>
-                                    </div> 
-                                </form>
+                                    </form>
+                                </div>
                                 <div class="conteiner-xs-12">
                                     <div class="col-12 form-check justify-content-center">
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -607,17 +610,6 @@
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script>document.getElementById("year").innerHTML = new Date().getFullYear();</script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.faq-toggle').forEach(item => {
-                item.addEventListener('click', event => {
-                    const faqContent = item.nextElementSibling;
-                    faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
-                });
-            });
-        });
-    </script>
     </body>
 </html>
