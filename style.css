@@ -2,40 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 body {
-    background-color: #101820; 
+    background-color: #101820;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.9) 50%,
+        rgba(0, 0, 0, 0) 100%
+    ); 
 }
 header {
     position: relative;
     background-color: #101820;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0.9) 100%
+    ); 
 }
 /*----Carousel----*/
 .carousel-inner .opacidad {
-    opacity: 0.6;
+    opacity: 0.5;
 }
 .carousel-inner {
     background-color: #101820;
     overflow: hidden;
     height: 100vh;  
+    z-index: 1;
 }
 .carousel-inner .carousel-item{
     position: static;
 }
 
 /*----Navegador Principal----*/
+#barraNav{
+    padding-top: 5%;
+    padding-bottom: 7%;
+    z-index: 10;
+}
 .nav-link, .nav-item{
     color: white;
 }
 .nav-link a:hover {
     cursor: pointer;
 }
-#barraNav{
-    padding: 5%;
-}
 #barraNav li{
     font-weight: bold;
 }
+/*----Logo ExplorArg----*/ 
 #logotipo{
     gap: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,11 +67,62 @@ header {
     position: relative;
     bottom: 0;
 }
+/*----Dropdown----*/
+.contenedor-drop {
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+:checked ~ .contenedor-drop {
+    display: block;
+}
+input.oculto[type=checkbox] {
+    position: absolute;
+    left: -999em;
+}
+.dropdown{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 10rem;
+    top: 2.7rem;
+    right: -3.5rem;
+    background: #fff;
+    border-top-left-radius: 6%;
+    border-top-right-radius: 6%;
+    border-bottom-left-radius: 6%;
+    border-bottom-right-radius: 6%;
+}
+.dropdown ul{
+    justify-content: center;
+    align-items: center;
+}
+.dropdown li a{
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #101820;
+    margin-left: 1.5rem;
+}
+.dropdown li a:hover{
+    background: #262626;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #fff;
+    transition: all 0.3s;
+}
 /*-------Buscador Vuelos-------*/
-#navBuscador{
+#navBuscador {
     width: 75%;
     position: absolute;
     left: 13%;
+    z-index: 5;
 }
 .buscadorReservas {
     background-color: #fff;
@@ -70,8 +137,6 @@ header {
 
 input, select {
     width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
     border-radius: 3px;
 }
 
