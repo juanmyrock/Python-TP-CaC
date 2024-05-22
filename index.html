@@ -21,9 +21,9 @@
                     <!-- Acá van la cantidad de Slides junto con sus respectivas imágenes -->
                     <div class="carousel-inner w-100">
                         <div class="carousel-item active" data-bs-interval="2000">
-                            <img src="img/cataratas.jpg" class="img-fluid d-block w-100 opacidad" alt="Cataratas del Iguazú">
+                            <img src="img/salta.jpg" class="img-fluid d-block w-100 opacidad" alt="Cataratas del Iguazú">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>Cataratas del Iguazú, Misiones</h2>
+                                <h2>Valle Calchaquíes, Salta</h2>
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
@@ -33,9 +33,9 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="img/salta.jpg" class="img-fluid d-block w-100 opacidad" alt="Valles Calchaquies">
+                            <img src="img/cataratas.jpg" class="img-fluid d-block w-100 opacidad" alt="Valles Calchaquies">
                             <div class="carousel-caption d-none d-md-block">
-                                <h2>Valle Calchaquíes, Salta</h2>
+                                <h2>Cataratas del Iguazú, Misiones</h2>
                             </div>
                         </div>
                     </div>
@@ -101,13 +101,15 @@
                         </div>
                         <div class="row">
                             <!-- Buscador de Vuelos -->
-                            <nav id="navBuscador" class="conteiner-xs text-light">
-                                <div class="conteiner-xs"> <!-- Título -->
+                            <nav id="navBuscador" class="container-xs text-light">
+                                <div class="container-xs">
+                                    <!-- Título -->
                                     <div class="row">
                                         <div class="col"><h2 style="color: white">Reserva tu vuelo</h2></div>
                                     </div>
                                 </div>
-                                <div class="conteiner-xs"> <!-- RadioButtons selectores -->
+                                <div class="container-xs">
+                                    <!-- RadioButtons selectores -->
                                     <div class="row">
                                         <div class="col-2">
                                             <label>Ida y vuelta</label>
@@ -119,34 +121,31 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="formContenedor"> <!-- Formulario del buscador -->
+                                <div class="formContenedor">
+                                    <!-- Formulario del buscador -->
                                     <form class="formulario">
                                         <div class="origen">
-                                            <label for="origen">Origen:</label>
+                                            <label for="id_origen">Origen:</label>
                                             <input id="id_origen" type="text" placeholder="Lugar de Salida">
                                         </div>
-                                        
                                         <div class="destino">
-                                            <label for="destino">Destino:</label>
+                                            <label for="id_destino">Destino:</label>
                                             <input id="id_destino" type="text" placeholder="Lugar de Destino">
                                         </div>
-                                        
-                                        <div class="fecha_ida">
+                                        <div class="fechaida">
                                             <label for="ida">Fecha de Ida:</label>
-                                            <input id="id_ida" type="date" value="">
+                                            <input id="ida" type="date" value="">
                                         </div>
-                                        
-                                        <div class="fecha_vuelta">
+                                        <div class="fechavuelta">
                                             <label for="vuelta">Fecha de Vuelta:</label>
-                                            <input id="id_vuelta" type="date" value="">
+                                            <input id="vuelta" type="date" value="">
                                         </div>
-
                                         <div class="btnBuscar">
                                             <button class="btn btn-lg btn-warning" type="submit">Buscar</button>
                                         </div>
                                     </form>
                                 </div>
-                                <div class="conteiner-xs-12">
+                                <div class="container-xs-12">
                                     <div class="col-12 form-check justify-content-center">
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                         <label class="form-check-label" for="invalidCheck">
@@ -156,7 +155,7 @@
                                             Debés de tildar la casilla
                                         </div>
                                     </div>
-                                </div>
+                                </div>                                
                             </nav>
                         </div>
                     </div>  

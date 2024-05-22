@@ -124,15 +124,12 @@ span:focus ~ .contenedor-drop{
 }
 .formContenedor {
     background-color: #fff;
-    padding: 0% 0% 1% 2%;
-    border-radius: 300px;
-    opacity: 0.7;
+    padding: 1% 2%;
+    border-radius: 100px;
+    opacity: 0.75;
 }
-.formContenedor form{
+.formContenedor form {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
 }
 .formContenedor div {
     width: 20rem;
@@ -143,21 +140,26 @@ span:focus ~ .contenedor-drop{
     margin-top: 5%;
     margin-left: 25%;
 }
-.formulario input {
-    padding: 8px;
+.formulario label {
+    color: #000000;
+    padding-left: 25%;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px darkgray;
+}
+.formulario input{
+    padding: 5px;
     border-radius: 15px;
-    border-width: 4px;
+    border-width: 3px;
     border-color: #262626;
     margin-left: 20%;
-    margin-bottom: 7%;
-
+    margin-bottom: 2%;
 }
-
-input, select {
-    width: 100%;
-    border-radius: 3px;
+.formulario .destino{
+    margin-left: 20px;
 }
-
+.formulario .fechaida{
+    margin-left: 20px;
+}
 /*----------------MAIN-----------------*/
 
 /*----Galería de Cards----*/
