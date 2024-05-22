@@ -32,33 +32,33 @@ header {
     height: 100vh;  
     z-index: 1;
 }
-.carousel-inner .carousel-item{
+.carousel-inner .carousel-item {
     position: static;
 }
 
 /*----Navegador Principal----*/
-#barraNav{
+#barraNav {
     padding-top: 5%;
     padding-bottom: 7%;
     z-index: 10;
 }
-.nav-link, .nav-item{
+.nav-link, .nav-item {
     color: white;
 }
 .nav-link a:hover {
     cursor: pointer;
 }
-#barraNav li{
+#barraNav li {
     font-weight: bold;
 }
 /*----Logo ExplorArg----*/ 
-#logotipo{
+#logotipo {
     gap: 10px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: relative;
     bottom: 0;
 }
-#logotipo img{
+#logotipo img {
     width: auto;
     height: 4rem;
     border-radius: 20%;
@@ -74,13 +74,13 @@ header {
     justify-content: center;
     align-items: center;
 }
-#botonDrop{
+#botonDrop {
     font-weight: bold;
 }
-span:focus ~ .contenedor-drop{
+span:focus ~ .contenedor-drop {
     display: block;
 }
-.dropdown{
+.dropdown {
     display: block;
     justify-content: center;
     align-items: center;
@@ -94,18 +94,18 @@ span:focus ~ .contenedor-drop{
     border-bottom-left-radius: 6%;
     border-bottom-right-radius: 6%;
 }
-.dropdown ul{
+.dropdown ul {
     justify-content: center;
     align-items: center;
 }
-.dropdown li a{
+.dropdown li a {
     text-decoration: none;
     list-style: none;
     display: inline-block;
     color: #101820;
     margin-left: 1.5rem;
 }
-.dropdown li a:hover{
+.dropdown li a:hover {
     background: #262626;
     border-radius: 5px;
     padding: 8px;
@@ -146,7 +146,7 @@ span:focus ~ .contenedor-drop{
     font-weight: bold;
     text-shadow: 1px 1px 4px darkgray;
 }
-.formulario input{
+.formulario input {
     padding: 5px;
     border-radius: 15px;
     border-width: 3px;
@@ -154,22 +154,23 @@ span:focus ~ .contenedor-drop{
     margin-left: 20%;
     margin-bottom: 2%;
 }
-.formulario .destino{
+.formulario .destino {
     margin-left: 20px;
 }
-.formulario .fechaida{
+.formulario .fechaida {
     margin-left: 20px;
 }
-.warnings{
+#vuelta:disabled {
+    background-color: #f46f6f;
+}
+#errorMessages {
     width: 290px;
     text-align: center;
     margin:auto;
     color: #ee2b25;
-    padding-top:20px;
     font-weight: bold;
-}
-#vuelta:disabled {
-    background-color: #f46f6f;
+    background-color: #fff;
+    border-radius: 10px;
 }
 /*----------------MAIN-----------------*/
 
