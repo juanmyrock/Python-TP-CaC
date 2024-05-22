@@ -1,3 +1,4 @@
+/******** Funcion de Like ********/
 const likeButtons = document.querySelectorAll(".card__btn");
 
 likeButtons.forEach((likeButton) => {
@@ -14,29 +15,46 @@ likeButtons2.forEach((likeButton) => {
   });
 });
 
-/********* Login **********/
+/********** Validaciones de Formulario Principal ***********/
 
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const form = document.getElementById("form");
-const parrafo = document.getElementById("warnings")
+/**** RadioButtons ****/
 
+const idaVueltaRadio = document.querySelector('input[name="ida-vuelta"][value="ida-vuelta"]');
+const soloIdaRadio = document.querySelector('input[name="ida-vuelta"][value="solo-ida"]');
+const fechaVueltaInput = document.getElementById("vuelta");
+// Función para deshabilitar o habilitar el input de fecha de vuelta
+const toggleFechaVueltaInput = () => {
+    fechaVueltaInput.disabled = soloIdaRadio.checked;
+};
+// Llamamos a la función al cargar la página para establecer el estado inicial
+toggleFechaVueltaInput();
+// Agregamos un evento de cambio a los radio buttons para llamar a la función toggleFechaVueltaInput
+idaVueltaRadio.addEventListener('change', toggleFechaVueltaInput);
+soloIdaRadio.addEventListener('change', toggleFechaVueltaInput);
 
+/**** Validaciones del Formulario de Búsqueda de Vuelos ****/
+const form = document.querySelector('.formulario');
+const origenInput = document.getElementById('id_origen');
+const destinoInput = document.getElementById('id_destino');
+const idaInput = document.getElementById('ida');
+const vueltaInput = document.getElementById('vuelta');
+const radioButtonIdaVuelta = document.querySelector('input[value="ida-vuelta"]');
+const btnBuscar = document.querySelector('.btnBuscar button');
 
-form.addEventListener("submit", e=>{
-    e.preventDefault()
-    let entrar = false;
-    let warnings = ""
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if(!regexEmail.test(email.value)){
-        warnings += `El email no es valido <br>`
-        entrar = true
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
+
+    // Si el radio button de ida y vuelta está seleccionado, verifica la fecha de vuelta
+    if (radioButtonIdaVuelta.checked && !vueltaInput.value) {
+      alert('Por favor, seleccione una fecha de vuelta.');
+      return;
     }
-    if(password.value.length < 8){
-        warnings += `La contraseña no es valida <br>`
-        entrar = true
+    // Verifica que los campos obligatorios estén completos
+    if (!origenInput.value || !destinoInput.value || !idaInput.value) {
+        alert('Por favor, complete todos los campos obligatorios.');
+        return;
     }
-    if(entrar){
-        parrafo.innerHTML = warnings
-    }
-})
+
+    // Si todos los campos requeridos están completos, envía el formulario
+    this.submit();
+});

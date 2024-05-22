@@ -6,7 +6,6 @@
     <title>ExplorArg</title>
     <script src="https://kit.fontawesome.com/0534ff471b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style2.css">
-    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -55,5 +54,34 @@
             </div>
         </div>
     </section>
+
+    <script>
+        /********* Login **********/
+
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const form = document.getElementById("form");
+const parrafo = document.getElementById("warnings")
+
+form.addEventListener("submit", e=>{
+    e.preventDefault()
+    let entrar = false;
+    let warnings = ""
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    if(!regexEmail.test(email.value)){
+        warnings += `El email no es valido <br>`
+        entrar = true
+    }
+    if(password.value.length < 8){
+        warnings += `La contraseña no es valida <br>`
+        entrar = true
+    }
+    if(entrar){
+        parrafo.innerHTML = warnings
+    }
+})
+
+
+    </script>
 </body>
 </html>

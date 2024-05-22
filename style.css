@@ -160,6 +160,17 @@ span:focus ~ .contenedor-drop{
 .formulario .fechaida{
     margin-left: 20px;
 }
+.warnings{
+    width: 290px;
+    text-align: center;
+    margin:auto;
+    color: #ee2b25;
+    padding-top:20px;
+    font-weight: bold;
+}
+#vuelta:disabled {
+    background-color: #f46f6f;
+}
 /*----------------MAIN-----------------*/
 
 /*----Galería de Cards----*/
