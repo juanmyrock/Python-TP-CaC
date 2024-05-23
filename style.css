@@ -122,6 +122,9 @@ span:focus ~ .contenedor-drop {
     left: 10%;
     z-index: 5;
 }
+.radiobuttons label{
+    font-weight: bold;
+}
 .formContenedor {
     background-color: #fff;
     padding: 1% 2%;
@@ -167,9 +170,9 @@ span:focus ~ .contenedor-drop {
     width: 290px;
     text-align: center;
     margin:auto;
-    color: #ee2b25;
+    color: #fff;
     font-weight: bold;
-    background-color: #fff;
+    background-color: #ee2b25;
     border-radius: 10px;
 }
 /*----------------MAIN-----------------*/
