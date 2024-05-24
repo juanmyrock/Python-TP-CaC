@@ -18,7 +18,12 @@ form.addEventListener("submit", e=>{
         warnings += `La contraseña no es valida <br>`
         entrar = true
     }
-    if(entrar){
-        parrafo.innerHTML = warnings
+    if (entrar) {
+        parrafo.innerHTML = warnings;
+    } 
+    else {
+        parrafo.innerHTML = "";
+        alert("Usuario logueado con éxito");
+        form.submit();
     }
 })
