@@ -194,7 +194,7 @@ span:focus ~ .contenedor-drop {
     justify-content: center;
     align-items: center;
     padding-top: 3%;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .promo_vuelos hr {
     width: 20%;
@@ -206,7 +206,7 @@ span:focus ~ .contenedor-drop {
     justify-content: center;
     align-items: center;
     padding-top: 3%;
-    color: #000000;
+    color: #fff;
 }
 .actividades_turist hr {
     width: 20%;
@@ -478,43 +478,52 @@ section{
 }
 /*-----------------FOOTER------------------*/
 
-/* footer */
 .footer {
-    background: linear-gradient(to bottom, black, #f0f0f0);
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(45deg, #333333, #000000);
+    color: #ffffff;
 }
 
-.footer-content {
-    display: flex;
+.footer-wrapper {
+    max-width: 1200px;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
     justify-content: space-between;
-    width: 80%;
+    position: relative;
 }
 
-.company-info {
-    flex: 1;
-    margin-right: 20px;
+.footer-links ul {
+    list-style: none;
+    padding: 0;
 }
 
-.map {
-    flex: 1;
+.footer-links ul li {
+    margin-bottom: 5px;
 }
 
-.map iframe {
-    width: 100%;
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-map {
+    text-align: right;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 2rem;
+    padding: 5px;
+    margin-left: 25px;
+    background-color: #fff;
     border-radius: 10px;
+    justify-content: center;
 }
-
-.footer h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #f0f0f0;
-}
-
-.footer p {
-    margin: 5px 0;
-    color: #dcdcdc;
+.social-icons img{
+    padding: 0 10px 0 10px;
 }
