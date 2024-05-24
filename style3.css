@@ -1,0 +1,236 @@
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: black;
+}
+
+.contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opacidad {
+    opacity: 0.6;
+}
+
+.logotipo{
+    position: absolute;
+    display: flex;
+    color: white;
+    top: 18rem;
+    left: 7rem;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 150%;
+    transition: all 0.3s ease-in-out;
+}
+.logotipo a {
+    text-decoration: none;
+    color: white;
+}
+.logotipo img {
+    width: auto;
+    height: 4.5rem;
+    border-radius: 20%;
+    border: 10px;
+    border-color: white;
+    position: relative;
+    top: 1rem;
+}
+.logotipo i {
+    position: absolute;
+    top: 5.5rem;
+    left: 45%;
+}
+.logotipo:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: all 0.4s ease-out;
+}
+
+
+.formularioRegistro {
+    position: absolute;
+    width: 400px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
+
+/* Estilos para el título */
+.formularioRegistro h2 {
+    font-size: 2.3rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos para los contenedores de los inputs */
+.input-contenedor {
+    position: relative;
+    margin: 10px 0;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+
+/* Mover el label para dar un efecto de movimiento */
+.input-contenedor label {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: .6s;
+    font-weight: bold;
+    opacity: 1;
+}
+
+/* Ocultar label cuando el input está válido */
+input:valid ~ label,
+select:valid ~ label,
+input[type="file"]:valid ~ label {
+    top: -15px;
+    opacity: 0;
+}
+
+/* Estilo para los inputs y select */
+.input-contenedor input,
+.input-contenedor select {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+/* Estilo personalizado para el select */
+.input-contenedor select {
+    color: #fff;
+    background: (0, 0, 0, 0.5);
+    border-radius: 25px;
+    position: relative;
+}
+
+/* Estilo para las opciones del select */
+.input-contenedor select option {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilo para el input de archivo */
+.input-contenedor input[type="file"] {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+.input-contenedor input[type="file"]:valid {
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    cursor: pointer;
+}
+
+/* Estilo para el label del input de archivo */
+.input-contenedor .dropfile-label {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px dashed #fff;
+    border-radius: 10px;
+    line-height: 30px;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* Estilo para los iconos */
+.input-contenedor i {
+    position: absolute;
+    color: #fff;
+    font-size: 1.6rem;
+    top: 19px;
+    right: 8px;
+}
+
+/* Estilo para "checkbox" */
+.checkbox {
+    padding-top: 10px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.checkbox label input {
+    margin: 3px;
+}
+
+/* Estilo para el botón de registro */
+button {
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Estilo para "Ya tienes cuenta" */
+.registrar {
+    font-size: 0.8rem;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.registrar p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.registrar p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para las advertencias */
+.warnings {
+    width: 290px;
+    text-align: center;
+    margin:auto;
+    color: #fff;
+    font-weight: bold;
+    background-color: #ee2b25;
+    border-radius: 10px;
+    position: relative;
+    left: 25rem;
+    bottom: 25rem;
+}
