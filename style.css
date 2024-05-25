@@ -76,6 +76,11 @@ header {
 }
 #botonDrop {
     font-weight: bold;
+}#botonDrop1 {
+    font-weight: bold;
+}
+li:focus ~ .contenedor-drop {
+    display: block;
 }
 span:focus ~ .contenedor-drop {
     display: block;
@@ -200,6 +205,9 @@ span:focus ~ .contenedor-drop {
     width: 20%;
     color: #fff;
     margin: 8px;
+}
+.promo_vuelos h2{
+    margin-right: 1%;
 }
 .actividades_turist {
     display: flex;
