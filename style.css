@@ -463,7 +463,7 @@ section{
     align-items: end;
     background: linear-gradient(
         to top, 
-        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.9) 25%,
         rgba(0, 0, 0, 0) 100%
     );
     color: var(--white);
@@ -471,6 +471,9 @@ section{
     bottom: 0;
     padding-left: 0.75rem;
     padding-bottom: 0.65rem;
+}
+.card3 figcaption h3 {
+    width: 10px;
 }
 .card3:hover ~ .card {
     font-weight: bold;
