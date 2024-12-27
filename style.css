@@ -12,6 +12,7 @@ body {
         rgba(0, 0, 0, 0.9) 50%,
         rgba(0, 0, 0, 0) 100%
     ); 
+    
 }
 header {
     position: relative;
@@ -119,6 +120,10 @@ span:focus ~ .contenedor-drop {
     display: inline-block;
     color: #fff;
     transition: all 0.4s;
+}
+li:hover .contenedor-drop,
+li:focus .contenedor-drop {
+    display: block;
 }
 /*-------Buscador Vuelos-------*/
 #navBuscador {
@@ -535,6 +540,95 @@ section{
     border-radius: 10px;
     justify-content: center;
 }
+
 .social-icons img{
     padding: 0 10px 0 10px;
+}
+
+
+/* Estilos para dispositivos móviles (≤ 480px) */
+@media (max-width: 480px) {
+    /* Aseguramos que el carrusel no se sobreponga al buscador */
+    .carousel-inner {
+        margin-bottom: 20px;  /* Añadimos margen inferior para separar del buscador */
+    }
+
+    /* Buscador */
+    #navBuscador {
+        width: 100%;  /* El buscador ocupará todo el ancho de la pantalla */
+        left: 0;  /* Alineamos el buscador a la izquierda */
+        top: 15%;  /* Espacio desde la parte superior de la pantalla */
+        margin-top: 30px;  /* Añadimos más espacio superior para separar del carrusel */
+        z-index: 2;  /* Aseguramos que el buscador esté por encima del fondo */
+        position: relative;
+    }
+
+    /* Contenedor del formulario */
+    .formContenedor {
+        background-color: #fff;
+        padding: 1rem;  /* Alineamos el padding */
+        opacity: 0.95;  /* Aumentamos la opacidad para mejor visibilidad */
+        border-radius: 15px;  /* Bordes redondeados más suaves */
+        width: 100%;  /* El contenedor ocupa todo el ancho de la pantalla */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    }
+
+    /* Estilo para el formulario */
+    .formContenedor form {
+        display: flex;
+        flex-direction: column;  /* Los campos estarán en una columna */
+        align-items: stretch;  /* Los campos ocuparán todo el ancho */
+    }
+
+    /* Los campos de entrada */
+    .formContenedor div {
+        width: 100%;  /* Los campos ocuparán todo el ancho */
+        margin: 0.5rem 0;  /* Espaciado entre los campos */
+    }
+
+    /* Estilo de los botones */
+    .formulario button {
+        width: 100%;  /* El botón ocupa todo el ancho disponible */
+        border-radius: 25px;
+        color: #fff;
+        margin-top: 5%;
+    }
+
+    /* Estilo de las etiquetas */
+    .formulario label {
+        color: #000000;
+        font-weight: bold;
+        text-shadow: 1px 1px 4px darkgray;
+    }
+
+    /* Estilo de los campos de entrada */
+    .formulario input {
+        width: 100%;  /* Los campos de entrada ocupan todo el ancho */
+        padding: 5px;
+        border-radius: 12px;  /* Bordes redondeados suaves */
+        border-width: 3px;
+        border-color: #262626;
+        margin-bottom: 2%;
+    }
+
+    /* Ajustamos el estilo del campo deshabilitado */
+    #vuelta:disabled {
+        background-color: #f46f6f;
+        opacity: 0.7;  /* Un poco más de transparencia para los campos deshabilitados */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);  /* Dos tarjetas por fila en dispositivos móviles */
+        gap: 10px;  /* Espacio reducido entre las tarjetas */
+    }
+    .card3 {
+        width: 100%;  /* Las tarjetas ocupan el 100% del ancho disponible */
+    }
+
+    .card3 figcaption {
+        width: 100%;  /* Estiramos el figcaption al 100% del ancho de la tarjeta */
+        padding-left: 1rem;  /* Agregamos algo de espacio desde el borde */
+        padding-right: 1rem;  /* Agregamos algo de espacio desde el borde */
+        padding-bottom: 1rem;  /* Espacio adicional en la parte inferior */
+    }
 }
